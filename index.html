@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>University GPA & CGPA Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+  <div class="container" id="calculator">
+    <h1>🎓 GPA & CGPA Calculator</h1>
+
+    <label for="university">Select University:</label>
+    <select id="university" onchange="updateUniversity()">
+      <option value="comsats">COMSATS</option>
+      <option value="nust">NUST</option>
+      <option value="uet">UET</option>
+    </select>
+
+    <div id="course-list" class="course-list"></div>
+
+    <div class="btn-group">
+      <button onclick="addCourse()">+ Add Course</button>
+      <button onclick="calculate()">🎯 Calculate</button>
+      <button onclick="downloadPDF()">⬇️ Download PDF</button>
+    </div>
+
+    <div class="results">
+      <p><strong>GPA:</strong> <span id="gpa">-</span></p>
+      <p><strong>CGPA:</strong> <span id="cgpa">-</span></p>
+      <p><strong>Percentage:</strong> <span id="percentage">-</span></p>
+      <p><strong>Total Obtained Marks:</strong> <span id="totalMarks">-</span></p>
+    </div>
+  </div>
+  <div class="final-button-container">
+    <button onclick="window.location.href='C:/Users/AH ABIDI/Downloads/coding Web/Calculator/cgpa cal/index.html'" class="final-navigate-btn">
+      Final CGPA
+    </button>
+  </div>
+  <script src="java.js"></script>
+</body>
+</html>
